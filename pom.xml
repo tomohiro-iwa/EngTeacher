@@ -6,13 +6,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.jetbrains.kotlin.examples</groupId>
-  <artifactId>hello-world</artifactId>
+  <artifactId>EngTeacher</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
     <kotlin.version>1.0.3</kotlin.version>
     <junit.version>4.12</junit.version>
-    <main.class>iwa.MainKt</main.class>
+    <main.class>main.kotlin.iwa.MainKt</main.class>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
   </properties>

@@ -1,4 +1,4 @@
-package iwa
+package main.kotlin.iwa
 
 import edu.stanford.nlp.ling.CoreAnnotations
 import edu.stanford.nlp.pipeline.Annotation
@@ -28,9 +28,11 @@ fun main(args: Array<String>){
     //    System.err.println(tree.getLeaves().subList(constituent.start(), constituent.end()+1));
     //  }
     //}
-e
-  var tree :Tree = annotation.get(CoreAnnotations.SentencesAnnotation::class.java).get(0).get(TreeCoreAnnotations.TreeAnnotation::class.java)
+  var tree :Tree = annotation.get(CoreAnnotations.SentencesAnnotation::class.java)[0].get(TreeCoreAnnotations.TreeAnnotation::class.java)
+  print("tree:")
   println(tree)
+  print("sentence:")
+  println(STreeAnalyzer.toSentence(tree))
 
 }
 
