@@ -4,6 +4,7 @@ import edu.stanford.nlp.ling.CoreAnnotations
 import edu.stanford.nlp.pipeline.Annotation
 import edu.stanford.nlp.pipeline.StanfordCoreNLP
 import edu.stanford.nlp.trees.*
+import sun.applet.Main
 
 import java.util.*
 
@@ -33,6 +34,14 @@ fun main(args: Array<String>){
   println(tree)
   print("sentence:")
   println(STreeAnalyzer.toSentence(tree))
+  println("html:")
+  println(STreeAnalyzer.toHtml(tree))
 
+  val frame:MainFrame = MainFrame()
+  frame.isVisible = true
+
+  frame.setHtml(STreeAnalyzer.toHtml(tree))
+  frame.addCss(".NP {border-style:solid}")
+  frame.addCss("DIV {display:inline}")
 }
 
